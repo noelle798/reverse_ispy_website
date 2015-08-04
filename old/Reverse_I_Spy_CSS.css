@@ -1,0 +1,63 @@
+﻿* {
+  /*border: 1px solid black;*/
+}
+
+html {
+  background-color: white;
+  padding: 30px 0;
+  font-family: 'Open Sans', "Trebuchet MS", "Verdana", sans-serif;
+  color: #191919;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+  font-family: 'Nixie One', "Trebuchet MS", 'Verdana', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+header p {
+  margin: 0;
+}
+
+section {
+  margin: 30px 0;
+}
+
+figure {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+figure img {
+  height: 105px;
+}
+
+figcaption {
+  background-color: #191919;
+  font-size: 17px;
+  color: white;
+  line-height: 200%;
+}
+
+#subtitle {
+  font-family: 'Open Sans', "Trebuchet MS", "Verdana", sans-serif;
+  font-size: 12px;
+}
+
+input {
+  padding: 10px;
+  border: solid 5px #b5b5b5;
+  font-size: 20px;
+}
+
+input:hover {
+  outline: 0;
+  border: 5px solid #989898;
+}
+
+input:focus {
+  outline: 0;
+  border: solid 5px #737373;
+}
