@@ -378,15 +378,27 @@ function getTimestamp() {
 
 function getQuestion($decision, $question) {
 	printHeader();
-	//echo ('<div style="text-align:center">I spy with my little eye, something whose description may include the word ... ' . $_SESSION['startingKeyword'] . '</div>');
-	echo '<div style="text-align:center"><p>Example questions:</p><p>Is it red?</p><p>Is it Object 7?</p><form method="post" action="Game.php"><input type="text" name="question" placeholder="Question" style="width: 300px"></input><input type="submit" name="ask" value="Ask"></input></form>';
+	echo '<div style="text-align:center">
+		<p>Example questions:</p>
+		<p>Is it red?</p>
+		<p>Is it Object 7?</p>
+
+		<form method="post" action="Game.php">
+			<input type="text" name="question" placeholder="Question" style="width: 300px"></input>
+			<input type="submit" name="ask" value="Ask"></input>
+		</form>';
 	printFooter();
 }
 
 function getGameID() {
 	session_destroy();
 	printHeader();
-	echo '<div style="margin-left: auto; margin-right: auto; width:355px;"><form method="post" action="Game.php"><input type="text" name="gameNum" placeholder="Game ID between 1-30" style="width: 300px"></input><input type="submit" name="submit" value="Play"></input></form></div>';
+	echo '<section id="game_id">
+	   <form method="post" action="Game.php">
+	      <input type="text" name="gameNum" placeholder="Game ID (1-30)"></input>
+	      <input type="submit" name="submit" value="Play"></input>
+	   </form>
+	</section>;'
 	printFooter();
 	if (!empty($_POST['id'])) {
   		$question = $_POST['id'];
@@ -451,9 +463,6 @@ function printHeader() {
   <title>Reverse I Spy Game</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="Reverse_I_Spy_CSS.css">
-  <!--[if lt IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
-  <![endif]-->
 </head>
 
 <header>
